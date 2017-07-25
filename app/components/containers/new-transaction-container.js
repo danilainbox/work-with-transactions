@@ -5,6 +5,7 @@ import AddRecipientContainer from './add-recipient-container';
 import RecipientContainer from './recipient-container';
 import SliderContainer from './slider-container';
 import Balance from '../views/balance'
+import TopNav from '../views/top-nav';
 import RaisedButton from 'material-ui/RaisedButton';
 import {connect} from 'react-redux';
 import axios from 'axios';
@@ -109,7 +110,6 @@ class NewTransactionContainer extends React.Component {
   }
 
   handleSliderMove(e, value) {
-    console.log(value);
 
     let recipients = [].concat(this.state.recipients),
       sum = this.calculateSum(recipients),
@@ -242,6 +242,7 @@ class NewTransactionContainer extends React.Component {
     return(
       <MuiThemeProvider>
         <div className="container">
+          <TopNav href="/" title="Transaction history" />
           {recipients}
           <AddRecipientContainer />
           <Balance balance={this.props.balance} />

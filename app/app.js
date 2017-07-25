@@ -14,7 +14,7 @@ import '../public/scss/style.scss';
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={}>
+    <Router>
       <Switch>
         <Route exact path="/" component={TransactionHistory} />
         <Route path="/new-transaction" component={NewTransactionContainer} />

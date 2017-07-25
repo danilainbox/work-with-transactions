@@ -1,5 +1,7 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import TopNav from './top-nav';
+import {connect} from 'react-redux';
 
 class TransactionHistory extends React.Component {
   constructor(props) {
@@ -9,10 +11,23 @@ class TransactionHistory extends React.Component {
   render() {
     return(
       <MuiThemeProvider>
-        <div>Transaction history will be here</div>
+        <div className="container">
+          <TopNav href="/new-transaction" title="New transaction" />
+          <div className="transaction-history">
+            {this.props.transactions.map((item, index) => {
+              return (
+                <div key={index} className="transaction-history__item">{JSON.stringify(item)}</div>
+              )
+            })}
+          </div>
+        </div>
       </MuiThemeProvider>
     );
   }
 }
 
-export default TransactionHistory
+const mapStateToProps = state => ({
+  transactions: state.transactionState
+});
+
+export default connect(mapStateToProps)(TransactionHistory);

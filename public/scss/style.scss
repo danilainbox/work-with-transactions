@@ -11,7 +11,7 @@ body {
 
 .container {
   max-width: 800px;
-  padding: 30px 15px;
+  padding: 55px 15px 30px;
   margin: 0 auto;
 }
 
@@ -97,5 +97,20 @@ body {
   }
   &__value {
     font-weight: 600;
+  }
+}
+
+.transaction-history {
+  &__item {
+    margin-bottom: 20px;
+  }
+}
+
+.top-nav {
+  position: fixed;
+  top: 10px;
+  margin-bottom: 30px;
+  &__link {
+    color: #00BCD4;
   }
 }

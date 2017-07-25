@@ -2,6 +2,23 @@
   box-sizing: border-box; }
 
 body {
-  font-size: 12px; }
-  body div {
-    font-size: 10px; }
+  font-size: 14px;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  max-width: 800px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.recipient__buttons, .recipient__edit {
+  display: none; }
+
+.recipient_mouseover .recipient__buttons {
+  display: block; }
+
+.recipient_edit .recipient__edit {
+  display: block; }
+
+.recipient_edit .recipient__buttons {
+  display: none; }

@@ -3,9 +3,99 @@
 }
 
 body {
-  font-size: 12px;
-  div {
-    font-size: 10px;
+  font-family: Roboto, Arial;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  padding: 30px 15px;
+  margin: 0 auto;
+}
+
+.add-recipient {
+  min-height: 50px;
+  margin-bottom: 15px;
+  &__name {
+    margin-right: 20px;
+    vertical-align: middle;
+  }
+  &__add {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  &__cancel {
+    vertical-align: middle;
   }
 }
 
+.recipients-wrapper {
+  margin-bottom: 15px;
+}
+
+.recipient {
+  min-height: 50px;
+  &__name {
+    display: inline-block;
+    width: 100px;
+    margin-right: 15px;
+  }
+  &__value {
+    margin-right: 25px;
+  }
+  &__delete {
+    margin-right: 10px;
+  }
+  &__new-name {
+    margin-right: 15px;
+    width: 140px;
+    vertical-align: middle;
+  }
+  &__new-name-accept {
+    vertical-align: middle;
+  }
+  &__edit {
+    vertical-align: middle;
+  }
+
+  &__buttons,
+  &__edit {
+    display: none;
+  }
+
+  &_mouseover {
+    .recipient__buttons {
+      display: inline-block;
+    }
+  }
+  &_edit {
+    .recipient__edit {
+      display: inline-block;
+    }
+    .recipient__buttons {
+      display: none;
+    }
+  }
+}
+
+.slider-container {
+  position: relative;
+  &__sum {
+    width: 100px;
+    margin-left: -55px;
+    text-align: center;
+    position: absolute;
+    top: 25px;
+  }
+}
+
+.balance {
+  &__label {
+    margin-right: 5px;
+  }
+  &__value {
+    font-weight: 600;
+  }
+}

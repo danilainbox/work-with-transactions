@@ -9,7 +9,7 @@ body {
 
 .container {
   max-width: 800px;
-  padding: 40px 15px;
+  padding: 55px 15px 30px;
   margin: 0 auto; }
 
 .add-recipient {
@@ -68,3 +68,13 @@ body {
 
 .balance__value {
   font-weight: 600; }
+
+.transaction-history__item {
+  margin-bottom: 20px; }
+
+.top-nav {
+  position: fixed;
+  top: 10px;
+  margin-bottom: 30px; }
+  .top-nav__link {
+    color: #00BCD4; }

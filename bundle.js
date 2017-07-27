@@ -36099,7 +36099,7 @@
 	    value: function makeTransaction() {
 	      var _this2 = this;
 
-	      _axios2.default.get('/data/ok.json').then(function (response) {
+	      _axios2.default.get('./data/ok.json').then(function (response) {
 	        if (response.data.ok) {
 
 	          var newBalance = _this2.props.balance - _this2.state.sum,

@@ -36115,10 +36115,10 @@
 	            balance: newBalance
 	          });
 
-	          // store.dispatch({
-	          //   type: 'TRANSACTION_SUCCESS',
-	          //   transaction: transaction
-	          // });
+	          _store2.default.dispatch({
+	            type: 'TRANSACTION_SUCCESS',
+	            transaction: transaction
+	          });
 
 	          _this2.setState({
 	            recipients: [],
